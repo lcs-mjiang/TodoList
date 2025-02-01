@@ -17,27 +17,23 @@ struct LandingView: View {
     // The search text
     @State var searchText = ""
     
+    
     // MARK: Computed properties
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ItemView(
-                        title: "Study for Chemistry quiz",
-                        done: false)
                     
-                    ItemView(
-                        title: "Finish CS assignment",
-                        done: true)
+                    ItemView(currentItem: firstItem)
+                    ItemView(currentItem: secondItem)
+                    ItemView(currentItem: thirdItem)
                     
-                    ItemView(
-                        title: "Go for around Campus",
-                        done: true)
                 }
                 .searchable(text: $searchText)
                 
                 HStack {
-                    TextField("Enter a to-do item", text: $newItemDescription)
+                    TextField("Enter a to-do item", text:
+                                $newItemDescription)
                     
                     Button("Add"){
                         //Add a new to-do item
