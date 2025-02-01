@@ -19,8 +19,6 @@ struct LandingView: View {
     
     // The list of to do item
     @State var todos: [TodoItem] = exampleItems
-    
-    
     // MARK: Computed properties
     var body: some View {
         NavigationView {
@@ -33,7 +31,16 @@ struct LandingView: View {
                     //ItemView(currentItem: firstItem)
                     //ItemView(currentItem: secondItem)
                     //ItemView(currentItem: thirdItem)
-                    
+                    // Delete a to-do item
+                        .swipeActions {
+                            Button(
+                                "Delete",
+                                role: .destructive,
+                                action: {
+                                    delete(todo)
+                                }
+                            )
+                        }
                 }
                 .searchable(text: $searchText)
                 
@@ -65,7 +72,15 @@ struct LandingView: View {
         // Append to the array
         todos.append(todo)
     }
+    func delete(_ todo: TodoItem) {
+        
+        // Remove the provided to-do item from the array
+        todos.removeAll { currentItem in
+            currentItem.id == todo.id
+        }
+    }
 }
+
 
 #Preview{
     LandingView()
