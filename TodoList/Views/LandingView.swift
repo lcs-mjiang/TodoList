@@ -16,14 +16,27 @@ struct LandingView: View {
     
     // The search text
     @State var searchText = ""
+    
     // MARK: Computed properties
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    Text("Study for Chemistry quiz")
-                    Text("Study for bio test")
-                    Text("Walk around in campus")
+                    Label(
+                        title: {Text("Study for math quize") },
+                        icon: { Image(systemName: "circle")
+                        }
+                    )
+                    Label(
+                        title: {Text("Finish bio homework") },
+                        icon: { Image(systemName: "circle")
+                        }
+                    )
+                    Label(
+                        title: {Text("Walk around in campus") },
+                        icon: { Image(systemName: "circle")
+                        }
+                    )
                 }
                 .searchable(text: $searchText)
                 
