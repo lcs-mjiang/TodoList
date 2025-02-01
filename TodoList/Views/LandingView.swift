@@ -26,7 +26,6 @@ struct LandingView: View {
                     
                     ItemView(currentItem: firstItem)
                     ItemView(currentItem: secondItem)
-                    ItemView(currentItem: thirdItem)
                     
                 }
                 .searchable(text: $searchText)

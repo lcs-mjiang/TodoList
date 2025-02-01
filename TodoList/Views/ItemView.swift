@@ -16,7 +16,7 @@ struct ItemView: View {
                 Text(currentItem.title)
             },icon: {
                 Image(systemName: currentItem.done == true ?
-                      "checkmark.circle" : "ciecle")
+                      "checkmark.circle" : "circle")
 //                if done == true {
 //                    Image(systemName: "checkmark.circle")
 //                } else {
