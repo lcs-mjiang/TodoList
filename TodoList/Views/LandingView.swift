@@ -27,7 +27,7 @@ struct LandingView: View {
                 
                 List($todos) { $todo in
                     
-                    ItemView(currentItem: todo)
+                    ItemView(currentItem: $todo)
                     //ItemView(currentItem: firstItem)
                     //ItemView(currentItem: secondItem)
                     //ItemView(currentItem: thirdItem)
@@ -41,10 +41,7 @@ struct LandingView: View {
                                 }
                             )
                         }
-                    // Tap to mark as down
-                        .onTapGesture {
-                            todo.done.toggle()
-                        }
+                    
                 }
                 .searchable(text: $searchText)
                 
