@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemView: View {
+    
     let currentItem: TodoItem
     
     var body: some View {

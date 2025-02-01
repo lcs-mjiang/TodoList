@@ -16,7 +16,7 @@ let firstItem = TodoItem(title: "Study for Chemistry quiz", done: false)
 
 let secondItem = TodoItem(title: "Finish CS assignment", done: true)
 
-let thirdItem = (title: "Go for around campus", done: false)
+let thirdItem = TodoItem(title: "Go for around campus", done: false)
 
 
 let exampleItems = [
@@ -27,4 +27,4 @@ let exampleItems = [
     ,
     thirdItem
     ,
-] as [Any]
+]
